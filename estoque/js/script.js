@@ -8,3 +8,12 @@ const estoque = [
     {id: 6, nome: "Mesa de Escritório", preco: 4500, categoria: "Móveis"},
     
 ];
+
+const btnAdicionar = document.getElementById("btn-adicionar");
+
+btnAdicionar.addEventListener("click", () => {
+    const prodIdInput = document.getElementById("prod-id");
+    const nomeInput = document.getElementById("prod-nome");
+    const precoInput = parseFloat(document.getElementById("prod-preco").value);
+    const categoriaInput = document.getElementById("prod-categoria");
+});
