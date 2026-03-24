@@ -33,7 +33,6 @@ btnAdicionar.addEventListener("click", () => {
     estoque.push(novoProduto);
     alert(`Produto "${novoProduto.nome}" adicionado com sucesso!`);
 
-
     // Limpar os campos após adicionar
     prodIdInput.value = "";
     nomeInput.value = "";
@@ -43,4 +42,21 @@ btnAdicionar.addEventListener("click", () => {
     console.log("Produto adicionado:", novoProduto);
     console.log("Estoque atualizado:", estoque);
 
+
+    listarProdutos();
+
+
 });
+
+
+const listarProdutos =() => {
+    const listaProdutos = document.getElementById("lista-exibicao");
+    listaProdutos.innerHTML = "";
+    estoque.forEach(produto => {
+        const item = document.createElement("li");
+        item.textContent = `ID: ${produto.id} | Nome: ${produto.nome} | Preço: R$${produto.preco} | Categoria: ${produto.categoria}`;
+        listaProdutos.appendChild(item);
+    });
+};
+
+listarProdutos();
