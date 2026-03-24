@@ -8,3 +8,55 @@ const estoque = [
     {id: 6, nome: "Mesa de Escritório", preco: 4500, categoria: "Móveis"},
     
 ];
+
+const btnAdicionar = document.getElementById("btn-adicionar");
+
+btnAdicionar.addEventListener("click", () => {
+    const prodIdInput = document.getElementById("prod-id");
+    const nomeInput = document.getElementById("prod-nome");
+    
+    const precoInput = document.getElementById("prod-preco");
+    precoInput.value = parseFloat(precoInput.value);
+
+    const categoriaInput = document.getElementById("prod-categoria");
+
+    if (!prodIdInput.value || !nomeInput.value || isNaN(precoInput.value) || !categoriaInput.value) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+    const novoProduto = {
+        id: parseInt(prodIdInput.value),
+        nome: nomeInput.value,
+        preco: precoInput.value,
+        categoria: categoriaInput.value,
+    };
+    estoque.push(novoProduto);
+    alert(`Produto "${novoProduto.nome}" adicionado com sucesso!`);
+
+    // Limpar os campos após adicionar
+    prodIdInput.value = "";
+    nomeInput.value = "";
+    precoInput.value = "";
+    categoriaInput.value = "";
+
+    console.log("Produto adicionado:", novoProduto);
+    console.log("Estoque atualizado:", estoque);
+
+
+    listarProdutos();
+
+
+});
+
+
+const listarProdutos =() => {
+    const listaProdutos = document.getElementById("lista-exibicao");
+    listaProdutos.innerHTML = "";
+    estoque.forEach(produto => {
+        const item = document.createElement("li");
+        item.textContent = `ID: ${produto.id} | Nome: ${produto.nome} | Preço: R$${produto.preco} | Categoria: ${produto.categoria}`;
+        listaProdutos.appendChild(item);
+    });
+};
+
+listarProdutos();
