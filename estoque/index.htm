@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TechShop - Gestão de Estoque</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>TechShop: Controle de Produtos</h1>
+    </header>
+
+    <nav>
+        <p>Status do Sistema: <span id="status-sessao">Online</span></p>
+    </nav>
+
+    <main>
+        <section id="cadastro">
+            <h2>Cadastrar Novo Produto</h2>
+            <form id="form-estoque">
+                <input type="text" id="prod-id" placeholder="ID do Produto">
+                <input type="text" id="prod-nome" placeholder="Nome do Produto">
+                <input type="text" id="prod-preco" placeholder="Preço (R$)">
+                <input type="text" id="prod-categoria" placeholder="Categoria">
+                <button type="button" id="btn-adicionar">Adicionar ao Estoque</button>
+            </form>
+        </section>
+
+        <section id="lista">
+            <h2>Produtos no Estoque</h2>
+            <ul id="lista-exibicao">
+                </ul>
+        </section>
+
+        <section id="controles">
+            <button type="button" id="btn-filtro">Filtrar > R$ 2500</button>
+            <button type="button" id="btn-total">Calcular Valor Total</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>FIAP - 2026 - CheckPoint 1 - Modelo A</p>
+    </footer>
+
+</body>
+</html>

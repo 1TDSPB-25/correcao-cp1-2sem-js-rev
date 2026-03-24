@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
+header, footer { background-color: #333; color: white; text-align: center; padding: 10px; }
+nav { background-color: #ddd; padding: 10px; margin-bottom: 20px; text-align: center; }
+main { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+section { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+form input { padding: 10px; margin-right: 5px; margin-bottom: 10px; width: 20%; }
+button { padding: 10px 15px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px; }
+button:hover { background-color: #0056b3; }
+ul { list-style: none; padding: 0; }
+li { padding: 8px; background: #f9f9f9; margin-bottom: 5px; border-left: 5px solid #007bff; display: flex; justify-content: space-between; }
